@@ -1,14 +1,14 @@
 {
-  "name": "sgb-screen-product-list",
+  "name": "sgb-screen-list",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/sgb-screen-product-list",
+  "main": "dist/sgb-screen-list.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SYNERGY-GB/sgb-screen-product-list.git"
+    "url": "https://github.com/SYNERGY-GB/sgb-screen-list.git"
   },
   "author": "",
   "license": "Propietary",

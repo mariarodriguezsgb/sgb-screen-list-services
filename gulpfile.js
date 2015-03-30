@@ -11,7 +11,7 @@ gulp.task('build', function(){
         return b.bundle();
     });
 
-    return gulp.src('src/sgb-screen-product-list.js')
+    return gulp.src('src/sgb-screen-list.js')
         .pipe(browserified)
         .pipe(gulp.dest('./dist/'));
 });

@@ -5,7 +5,7 @@
   "authors": [
     "Saul Hernandez <saul.hernandez@synergy-gb.com>"
   ],
-  "main": "dist/sgb-screen-product-list.js",
+  "main": "dist/sgb-screen-list.js",
   "moduleType": [
     "globals"
   ],
