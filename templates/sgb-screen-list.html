@@ -3,7 +3,7 @@
     <div class="bar bar-header item-input-inset">
       <label class="item-input-wrapper">
         <i class="icon ion-ios-search placeholder-icon"></i>
-        <input type="search" placeholder="{{ 'list_search' | translate }}" ng-change="itemSearchHandler()">
+        <input type="search" placeholder="{{ 'list_search' | translate }}" ng-model="itemToSearch" ng-change="itemSearchHandler()">
       </label>
       <button class="button button-clear" translate="list_search_cancel" ng-click="itemSearchCancelHandler()">
       </button>
