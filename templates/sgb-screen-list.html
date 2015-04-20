@@ -1,12 +1,21 @@
-<ion-view translate-attr-view-title="product_list_title">
-    <ion-content>
-        <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items">
-                <img ng-src="{{item.photo}}">
-                <h2>{{item.name}}</h2>
-                <p>{{item.description}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
-        </ion-list>
-    </ion-content>
+<ion-view view-title="{{ 'list_title' | translate }}">
+  <ion-content>
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="{{ 'list_search' | translate }}" ng-change="itemSearchHandler()">
+      </label>
+      <button class="button button-clear" translate="list_search_cancel" ng-click="itemSearchCancelHandler()">
+      </button>
+    </div>
+    <div class="list">
+      <a class="item item-thumbnail-left item-icon-right" ng-repeat="item in items" ng-click="itemClickHandler(item)">
+        <img src="{{ item.image }}">
+        <p class="listItemTitle">{{item.title}}</p>
+        <p>{{item.detail1}}</p>
+        <p>{{item.url}}</p>
+        <i class="icon ion-ios-arrow-forward"></i>
+      </a>
+    </div>
+  </ion-content>
 </ion-view>
