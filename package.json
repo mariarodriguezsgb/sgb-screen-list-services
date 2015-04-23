@@ -1,6 +1,6 @@
 {
   "name": "sgb-screen-list",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/sgb-screen-list.js",
   "scripts": {
