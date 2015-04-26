@@ -3,7 +3,7 @@
 angular.module('sgb-screen-list', ['megazord'])
   .controller('sgb-screen-list-controller', ['_router', '_screenParams','$stateParams', '$scope', function(_router, _screenParams, $stateParams, $scope){
       $scope.items = $stateParams.data;
-      $scope.title = _screenParams.title;
+      $scope.title = _screenParams.title || 'list_title';
 
       $scope.itemSearchHandler = function(){};
 
