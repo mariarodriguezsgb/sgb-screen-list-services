@@ -10,9 +10,9 @@ angular.module('sgb-screen-list', ['megazord'])
 
         $scope.title = _screenParams.title || 'list_title';
 
-        $scope.filterItems = function(){
-            console.log('scope is ' + $scope.searchQuery);
-            var search = $scope.searchQuery.toLowerCase();
+        $scope.filterItems = function(searchQuery){
+            console.log('scope is ' + searchQuery);
+            var search = searchQuery.toLowerCase();
             $scope.filteredItems = _.filter($scope.items, function(item){
                 return (item.title && item.title.toLowerCase().indexOf(search) != -1) ||
                     (item.detail1 && item.detail1.toLowerCase().indexOf(search) != -1) ||
