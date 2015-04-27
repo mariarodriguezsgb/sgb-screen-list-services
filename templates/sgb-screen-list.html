@@ -9,7 +9,7 @@
       </button>
     </div>
     <div class="list">
-      <a class="item item-thumbnail-left item-icon-right" ng-repeat="item in items" ng-click="itemClickHandler(item)">
+      <a class="item item-thumbnail-left item-icon-right" ng-repeat="item in filteredItems" ng-click="itemClickHandler(item)">
         <img src="{{ item.image }}">
         <p class="listItemTitle">{{ item.title }}</p>
         <p>{{ item.detail1 }}</p>
