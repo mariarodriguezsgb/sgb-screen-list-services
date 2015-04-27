@@ -1,23 +1,34 @@
 'use strict';
 
 angular.module('sgb-screen-list', ['megazord'])
-  .controller('sgb-screen-list-controller', ['_router', '_screenParams','$stateParams', '$scope', function(_router, _screenParams, $stateParams, $scope){
-      $scope.items = $stateParams.data;
-      $scope.title = _screenParams.title || 'list_title';
+  .controller('sgb-screen-list-controller', ['_router', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screenParams, $stateParams, $scope, _){
+        $scope.items = $stateParams.data;
+        $scope.filteredItems = $scope.items;
+        $scope.showSearch = _screenParams.showSearch;
 
-      $scope.itemSearchHandler = function(){};
+        $scope.title = _screenParams.title || 'list_title';
 
-      $scope.itemSearchCancelHandler = function(){};
+        $scope.filterItems = function(){
+            var search = $scope.searchText.toLowerCase();
+            $scope.filteredItems = _.filter($scope.items, function(item){
+                return (item.title && item.title.toLowerCase().indexOf(search) != -1) ||
+                    (item.detail1 && item.detail1.toLowerCase().indexOf(search) != -1) ||
+                    (item.detail2 && item.title.toLowerCase().indexOf(search) != -1) ||
+                    (item.url && item.title.toLowerCase().indexOf(search) != -1);
+            });
+        };
 
-      $scope.itemClickHandler = function(item){
-      //Nothing to do but fire the event
-      console.log('Going to fire event with ' + item);
-      _router.fireEvent({
-        name: 'itemClick',
-        params: {
-          item: item
-        }
-      })
+        $scope.cancelSearch = function(){};
+
+        $scope.itemClickHandler = function(item){
+        //Nothing to do but fire the event
+        console.log('Going to fire event with ' + item);
+        _router.fireEvent({
+         name: 'itemClick',
+         params: {
+           item: item
+         }
+        })
     };
 
   }]);
