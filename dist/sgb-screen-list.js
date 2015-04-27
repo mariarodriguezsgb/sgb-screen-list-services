@@ -4,6 +4,7 @@
 angular.module('sgb-screen-list', ['megazord'])
   .controller('sgb-screen-list-controller', ['_router', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screenParams, $stateParams, $scope, _){
         $scope.items = $stateParams.data;
+        $scope.searchQuery = "";
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
 
