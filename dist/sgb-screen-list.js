@@ -22,7 +22,7 @@ angular.module('sgb-screen-list', ['megazord'])
         };
 
         $scope.cancelSearch = function(){
-            $scope.searchText = "";
+            $scope.searchQuery = "";
             $scope.filteredItems = $scope.items;
         };
 
