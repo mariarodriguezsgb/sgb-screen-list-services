@@ -14,12 +14,15 @@ angular.module('sgb-screen-list', ['megazord'])
             $scope.filteredItems = _.filter($scope.items, function(item){
                 return (item.title && item.title.toLowerCase().indexOf(search) != -1) ||
                     (item.detail1 && item.detail1.toLowerCase().indexOf(search) != -1) ||
-                    (item.detail2 && item.title.toLowerCase().indexOf(search) != -1) ||
-                    (item.url && item.title.toLowerCase().indexOf(search) != -1);
+                    (item.detail2 && item.detail2.toLowerCase().indexOf(search) != -1) ||
+                    (item.url && item.url.toLowerCase().indexOf(search) != -1);
             });
         };
 
-        $scope.cancelSearch = function(){};
+        $scope.cancelSearch = function(){
+            $scope.searchText = "";
+            $scope.filteredItems = $scope.items;
+        };
 
         $scope.itemClickHandler = function(item){
         //Nothing to do but fire the event
