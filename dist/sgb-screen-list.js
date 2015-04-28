@@ -11,7 +11,6 @@ angular.module('sgb-screen-list', ['megazord'])
         $scope.title = _screenParams.title || 'list_title';
 
         $scope.filterItems = function(searchQuery){
-            console.log('scope is ' + searchQuery);
             var search = searchQuery.toLowerCase();
             $scope.filteredItems = _.filter($scope.items, function(item){
                 return (item.title && item.title.toLowerCase().indexOf(search) != -1) ||
@@ -27,15 +26,13 @@ angular.module('sgb-screen-list', ['megazord'])
         };
 
         $scope.itemClickHandler = function(item){
-        //Nothing to do but fire the event
-        console.log('Going to fire event with ' + item);
-        _router.fireEvent({
-         name: 'itemClick',
-         params: {
-           item: item
-         }
-        })
-    };
-
+            //Nothing to do but fire the event
+            _router.fireEvent({
+                 name: 'itemClick',
+                 params: {
+                   item: item
+                 }
+            })
+        };
   }]);
 },{}]},{},[1]);

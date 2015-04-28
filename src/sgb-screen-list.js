@@ -25,14 +25,12 @@ angular.module('sgb-screen-list', ['megazord'])
         };
 
         $scope.itemClickHandler = function(item){
-        //Nothing to do but fire the event
-        console.log('Going to fire event with ' + item);
-        _router.fireEvent({
-         name: 'itemClick',
-         params: {
-           item: item
-         }
-        })
-    };
-
+            //Nothing to do but fire the event
+            _router.fireEvent({
+                 name: 'itemClick',
+                 params: {
+                   item: item
+                 }
+            })
+        };
   }]);
