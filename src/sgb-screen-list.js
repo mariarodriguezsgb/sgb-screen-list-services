@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('sgb-screen-list', ['megazord'])
-  .controller('sgb-screen-list-controller', ['_router', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screenParams, $stateParams, $scope, _){
+  .controller('sgb-screen-list-controller', ['_router', '_screen', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screen, _screenParams, $stateParams, $scope, _){
+
+        _screen.initialize($scope, _screenParams);
+
         $scope.items = $stateParams.data;
         $scope.searchQuery = "";
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
-
-        $scope.title = _screenParams.title || 'list_title';
 
         $scope.filterItems = function(searchQuery){
             var search = searchQuery.toLowerCase();
