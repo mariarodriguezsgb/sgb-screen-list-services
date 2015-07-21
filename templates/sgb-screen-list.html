@@ -15,9 +15,9 @@
             <a class="item item-thumbnail-left item-icon-right item-stable listBackground" ng-repeat="item in filteredItems" ng-click="itemClickHandler(item)">
                 <img src="{{ item.image }}">
                 <h2 class="listItemTitle">{{ item.title }}</h2>
-                <p class="detail1" ng-show="item.detail1">{{ item.detail1 }}</p>
-                <p ng-show="item.url">{{ item.url }}</p>
-                <p ng-show="item.company">{{ item.company }}</p>
+                <p class="detail1" ng-show="item.detail_1">{{ item.detail_1 }}</p>
+                <p ng-show="item.detail_2">{{ item.detail_2 }}</p>
+                <p ng-show="item.detail_3">{{ item.detail_3 }}</p>
                 <i class="icon ion-chevron-right"></i>
             </a>
         </div>
