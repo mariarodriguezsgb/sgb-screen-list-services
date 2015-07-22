@@ -16,7 +16,8 @@ angular.module('sgb-screen-list', ['megazord'])
                 return (item.title && item.title.toLowerCase().indexOf(search) != -1) ||
                     (item.detail_1 && item.detail_1.toLowerCase().indexOf(search) != -1) ||
                     (item.detail_2 && item.detail_2.toLowerCase().indexOf(search) != -1) ||
-                    (item.detail_3 && item.detail_3.toLowerCase().indexOf(search) != -1);
+                    (item.url && item.url.toLowerCase().indexOf(search) != -1) ||
+                    (item.desc && item.desc.toLowerCase().indexOf(search) != -1);
             });
         };
 
