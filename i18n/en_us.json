@@ -1,4 +1,5 @@
 {
   "list_search": "Search",
-  "list_search_cancel": "Cancel"
+  "list_search_cancel": "Cancel",
+  "empty_search" : "The search did not obtain any results"
 }

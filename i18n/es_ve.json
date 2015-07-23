@@ -1,4 +1,5 @@
 {
   "list_search": "Buscar",
-  "list_search_cancel": "Cancelar"
+  "list_search_cancel": "Cancelar",
+  "empty_search" : "La búsqueda no ha obtenido ninǵun resultado"
 }
