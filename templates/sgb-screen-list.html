@@ -1,6 +1,5 @@
 <ion-view view-title="{{ title | translate }}" class="appBackground">
     <ion-content>
-
         <div class="searchBarView card item-input-inset" ng-show="showSearch">
             <label class="searchField item-input-wrapper">
                 <i class="icon ion-ios-search placeholder-icon"></i>
@@ -10,16 +9,10 @@
                 <i class="icon ion-close-circled searchCancelButton"></i>
             </button>
         </div>
+        
+        <list-template data="item" ng-repeat="item in filteredItems" ng-click="itemClickHandler(item)">
+        </list-template>
 
-        <div class="list card opaque">
-            <a class="item item-thumbnail-left item-icon-right item-stable listBackground" ng-repeat="item in filteredItems" ng-click="itemClickHandler(item)">
-                <img src="{{ item.image }}">
-                <h2 class="listItemTitle">{{ item.title }}</h2>
-                <p ng-show="item.detail_1">{{ item.detail_1 }}</p>
-                <p ng-show="item.detail_2">{{ item.detail_2 }}</p>
-                <i class="icon ion-chevron-right"></i>
-            </a>
-        </div>
         <div class="card" ng-show="!filteredItems.length">
             <div class="item item-text-wrap">
                 {{'empty_search' | translate }}

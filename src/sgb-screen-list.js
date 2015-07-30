@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('sgb-screen-list', ['megazord'])
-  .controller('sgb-screen-list-controller', ['_router', '_screen', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screen, _screenParams, $stateParams, $scope, _){
+    .controller('sgb-screen-list-controller', ['_router', '_screen', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screen, _screenParams, $stateParams, $scope, _){
 
         _screen.initialize($scope, _screenParams);
 
@@ -9,6 +9,9 @@ angular.module('sgb-screen-list', ['megazord'])
         $scope.searchQuery = "";
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
+        $scope.templateFunc = _screenParams.templateFunc; 
+        $scope.iconFunc = _screenParams.iconFunc; 
+
 
         $scope.filterItems = function(searchQuery){
             var search = searchQuery.toLowerCase();
@@ -35,4 +38,27 @@ angular.module('sgb-screen-list', ['megazord'])
                  }
             })
         };
-  }]);
+    }])
+
+
+   .directive('listTemplate', function() {
+        return {
+            restrict: 'EA',
+            scope: {
+                user: '=data',
+                func: '=templateFunc',
+                showicon: '=iconFunc'
+                
+            },
+            template: '<ng-include src="getTemplateUrl()"/>',
+            controller: function($scope) {
+                $scope.options = ['compact-left']; 
+                $scope.getTemplateUrl = function() {
+                    return 'directive_templates/list-'+
+                           //($scope.func?$scope.options[$scope.func($scope.user)]:$scope.options[1])+'.html';
+                           $scope.options[0]+'.html';
+
+                }
+            }
+        }; 
+    });
