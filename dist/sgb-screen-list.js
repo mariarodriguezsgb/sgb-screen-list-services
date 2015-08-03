@@ -1,13 +1,14 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
-
 angular.module('sgb-screen-list', ['megazord'])
     .controller('sgb-screen-list-controller', ['_router', '_screen', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screen, _screenParams, $stateParams, $scope, _){
 
         _screen.initialize($scope, _screenParams);
 
         $scope.items = $stateParams.data;
-        $scope.searchQuery = "";
+        $scope.searchQuery =  {
+            value: ''
+        }
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
         $scope.templateFunc = _screenParams.templateFunc; 
@@ -26,7 +27,7 @@ angular.module('sgb-screen-list', ['megazord'])
         };
 
         $scope.cancelSearch = function(){
-            $scope.searchQuery = "";
+            $scope.searchQuery.value = "";
             $scope.filteredItems = $scope.items;
         };
 
