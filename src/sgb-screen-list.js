@@ -56,9 +56,7 @@ angular.module('sgb-screen-list', ['megazord'])
                 $scope.options = ['compact-left']; 
                 $scope.getTemplateUrl = function() {
                     return 'directive_templates/list-'+
-                           //($scope.func?$scope.options[$scope.func($scope.data)]:$scope.options[1])+'.html';
-                           $scope.options[0]+'.html';
-
+                           ($scope.func?$scope.options[$scope.func($scope.data)]:$scope.options[0])+'.html';
                 }
             }
         }; 
