@@ -12,8 +12,7 @@ angular.module('sgb-screen-list', ['megazord'])
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
         $scope.templateFunc = _screenParams.templateFunc; 
-        $scope.iconFunc = _screenParams.iconFunc; 
-
+        $scope.showIcon = _screenParams.showIcon; 
 
         $scope.filterItems = function(searchQuery){
             var search = searchQuery.toLowerCase();
@@ -49,11 +48,12 @@ angular.module('sgb-screen-list', ['megazord'])
             scope: {
                 data: '=data',
                 func: '=templateFunc',
-                showicon: '=iconFunc'
+                showicon: '=icon'
                 
             },
             template: '<ng-include src="getTemplateUrl()"/>',
             controller: function($scope) {
+                console.log($scope.showicon); 
                 $scope.options = ['compact-left']; 
                 $scope.getTemplateUrl = function() {
                     return 'directive_templates/list-'+
