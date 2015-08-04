@@ -52,7 +52,6 @@ angular.module('sgb-screen-list', ['megazord'])
             },
             template: '<ng-include src="getTemplateUrl()"/>',
             controller: function($scope) {
-                console.log($scope.showicon); 
                 $scope.options = ['compact-left']; 
                 $scope.getTemplateUrl = function() {
                     return 'directive_templates/list-'+
