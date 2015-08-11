@@ -10,8 +10,12 @@ angular.module('sgb-screen-list', ['megazord'])
         }
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
-        $scope.templateFunc = _screenParams.templateFunc; 
+        $scope.templateType = _screenParams.templateType; 
         $scope.showIcon = _screenParams.showIcon; 
+
+       // console.log($scope.templateFunc);
+        //ERASE AFTER MZ-FRAMEWORK GETS UPDATED
+        $scope.screenType = "sgb-screen-list";
 
         $scope.filterItems = function(searchQuery){
             var search = searchQuery.toLowerCase();
@@ -38,25 +42,5 @@ angular.module('sgb-screen-list', ['megazord'])
                  }
             })
         };
-    }])
 
-
-   .directive('listTemplate', function() {
-        return {
-            restrict: 'EA',
-            scope: {
-                data: '=data',
-                func: '=templateFunc',
-                showicon: '=icon'
-                
-            },
-            template: '<ng-include src="getTemplateUrl()"/>',
-            controller: function($scope) {
-                $scope.options = ['compact-left']; 
-                $scope.getTemplateUrl = function() {
-                    return 'directive_templates/list-'+
-                           ($scope.func?$scope.options[$scope.func($scope.data)]:$scope.options[0])+'.html';
-                }
-            }
-        }; 
-    });
+    }]);
