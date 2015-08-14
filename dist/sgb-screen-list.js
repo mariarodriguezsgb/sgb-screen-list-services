@@ -4,19 +4,12 @@ angular.module('sgb-screen-list', ['megazord'])
     .controller('sgb-screen-list-controller', ['_router', '_screen', '_screenParams','$stateParams', '$scope', 'lodash', function(_router, _screen, _screenParams, $stateParams, $scope, _){
 
         _screen.initialize($scope, _screenParams);
-
         $scope.items = $stateParams.data;
         $scope.searchQuery =  {
             value: ''
         }
         $scope.filteredItems = $scope.items;
         $scope.showSearch = typeof(_screenParams.showSearch) === 'undefined'? true : _screenParams.showSearch;
-        $scope.templateType = _screenParams.templateType; 
-        $scope.showIcon = _screenParams.showIcon; 
-
-       // console.log($scope.templateFunc);
-        //ERASE AFTER MZ-FRAMEWORK GETS UPDATED
-        $scope.screenType = "sgb-screen-list";
 
         $scope.filterItems = function(searchQuery){
             var search = searchQuery.toLowerCase();
