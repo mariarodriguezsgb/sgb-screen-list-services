@@ -73,8 +73,8 @@ Para que cada ítem se muestre de forma distinta, se debe proveer una función e
 	   <resto de parametros> : "...",
 	   params: {
 	      templateFunc: function(item) {
-	         return (item.desc.length>30 ? @compact-left : 
-	                (item.desc.length>10 ? @news : @compact-left)); 
+	         return (item.desc.length>30 ? "@compact-left" : 
+	                (item.desc.length>10 ? "@news" : "@compact-left")); 
 	      }
 	   }
 
