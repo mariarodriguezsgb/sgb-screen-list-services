@@ -38,7 +38,7 @@ Adicionalmente para cada ítem, se puede proveer una lista de máximo tres recur
 
 <h3>Diseño</h3>
 
-Para que cada ítem se muestre de forma distinta, se debe proveer una función en los parámetros de la pantalla bajo el nombre de templateType.
+Para que cada ítem se muestre de forma distinta, se debe proveer una función en los parámetros de la pantalla bajo el nombre de templateType. Por ejemplo: 
 
 
 ![Alt Text](https://s3.amazonaws.com/megazord-framework/json+screenshots/json-templateType.png)
