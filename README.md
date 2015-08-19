@@ -28,7 +28,36 @@ Adicionalmente para cada ítem, se puede proveer una lista de máximo tres recur
 
 <h3>Ejemplo JSON</h3>
 
-![Alt Text](https://s3.amazonaws.com/megazord-framework/json+screenshots/json-list.png)
+   [ 
+        { 
+            "id": 1, 
+            "title": "<titutlo>", 
+		    "detail_1": "<subtitulo_1>", 
+		    "detail_2": "<subtitulo_2>", 
+		    "desc": "<descripcion extensa>", 
+		    "image":"<enlace>", 
+		    "resources" : [ 
+			    {"url" : "www.google.com", "src" : "../resources/telephone_icon.png"}, 
+				{"url" : "www.google.com",  "src" : "../resources/email_icon.png"}, 
+				{"url" : "www.google.com", "src" : "../resources/linkedin_icon.png"} 
+			] 
+    
+    	},
+    
+    	{ 
+		    "id": 2, 
+		    "title": "<titutlo>", 
+		    "detail_1": "<subtitulo_1>", 
+		    "detail_2": "<subtitulo_2>", 
+		    "desc": "<descripcion extensa>", 
+		    "image":"<enlace a la imagen>", 
+		    "resources" : [ 
+				{"url" : "www.google.com", "src" : "../resources/telephone_icon.png"}, 
+				{"url" : "www.google.com", "src" : "../resources/email_icon.png"}, 
+				{"url" : "www.google.com",  "src" : "../resources/linkedin_icon.png"} 
+		    ] 
+  	    } 
+   ] 
 
 <h3>Parámetros de la pantalla</h3>
 
@@ -48,3 +77,6 @@ Actualmente se cuentan con las siguientes opciones
 <h4>Opción @compact-left</h4>
 
 ![Alt Text](https://s3.amazonaws.com/megazord-framework/balsamiq+mockups/sgb-screen-list.png)
+
+
+Para esta vista existe la posibilidad de incluir un ićono a la derecha del texto.  Para lograr esto se debe proveer un parámetro (showIcon) en la pantalla que indique que ícono de ionic se va a desplegar, por ejemplo ion-chevron-right.  En caso de no proveer dicho parámetro no se mostrará ningún ícono
