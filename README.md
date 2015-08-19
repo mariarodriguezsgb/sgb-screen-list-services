@@ -28,7 +28,7 @@ Adicionalmente para cada ítem, se puede proveer una lista de máximo tres recur
 
 <h3>Ejemplo JSON</h3>
 
-   [ 
+    [ 
         { 
             "id": 1, 
             "title": "<titutlo>", 
@@ -57,7 +57,7 @@ Adicionalmente para cada ítem, se puede proveer una lista de máximo tres recur
 				{"url" : "www.google.com",  "src" : "../resources/linkedin_icon.png"} 
 		    ] 
   	    } 
-   ] 
+    ] 
 
 <h3>Parámetros de la pantalla</h3>
 
