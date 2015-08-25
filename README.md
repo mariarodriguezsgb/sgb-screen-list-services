@@ -82,7 +82,17 @@ Actualmente se cuentan con las siguientes opciones
 
 <h4>Opción @compact-left</h4>
 
-![Alt Text](https://s3.amazonaws.com/megazord-framework/balsamiq+mockups/sgb-screen-list.png)
+![Alt Text](https://s3.amazonaws.com/megazord-framework/balsamiq+mockups/sgb-screen-list-compact-left.png)
 
 
 Para esta vista existe la posibilidad de incluir un ićono a la derecha del texto.  Para lograr esto se debe proveer un parámetro (showIcon) en la pantalla que indique que ícono de ionic se va a desplegar, por ejemplo ion-chevron-right.  En caso de no proveer dicho parámetro no se mostrará ningún ícono
+
+<h4>Opción @compact-right</h4>
+
+![Alt Text](https://s3.amazonaws.com/megazord-framework/balsamiq+mockups/sgb-screen-list-compact-right.png)
+
+
+<h4>Opción @large</h4>
+
+![Alt Text](https://s3.amazonaws.com/megazord-framework/balsamiq+mockups/sgb-screen-list-large.png)
+

@@ -1,0 +1,9 @@
+<div class="card opaque">
+	<div class="item item-thumbnail-right item-stable">
+	    <img ng-show="bindTo.image" src="{{ bindTo.image }}"> 
+	    <h2 ng-show="bindTo.title">{{ bindTo.title }}</h2> 
+	    <p ng-show="bindTo.detail_1">{{ bindTo.detail_1 }}</p> 
+	    <p ng-show="bindTo.detail_2">{{ bindTo.detail_2 }}</p> 
+	    <p ng-show="bindTo.date">{{ bindTo.date | date : format : short }}</p> 
+	</div>   
+</div> 
