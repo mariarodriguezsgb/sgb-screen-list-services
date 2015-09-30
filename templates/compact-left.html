@@ -1,10 +1,10 @@
 <div class="card opaque">
     <div class="item item-thumbnail-left item-stable listBackground"
        ng-class="{ 'item-icon-right': screenParams.showIcon}">
-        <img src="{{ bindTo.item.image }}">
-        <h2 >{{ bindTo.item.title }}</h2>
-        <p ng-show="bindTo.item.detail_1">{{ bindTo.item.detail_1 }}</p>bind
-        <p ng-show="bindTo.item.detail_2">{{ bindTo.item.detail_2 }}</p>
+        <img src="{{ bindTo.image }}">
+        <h2 >{{ bindTo.title }}</h2>
+        <p ng-show="bindTo.detail_1">{{ bindTo.detail_1 }}</p>bind
+        <p ng-show="bindTo.detail_2">{{ bindTo.detail_2 }}</p>
    	 	<i ng-show ="screenParams.showIcon" class="{{screenParams.showIcon}}"></i> 
     </div>
 </div>
