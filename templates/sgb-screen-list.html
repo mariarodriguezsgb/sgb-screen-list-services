@@ -1,6 +1,6 @@
 <ion-view view-title="{{ title | translate }}" class="appBackground">
     <ion-content>
-        <div class="searchBarView card item-input-inset" ng-show="showSearch">
+         <div class="searchBarView card item-input-inset" ng-show="showSearch">
             <label class="searchField item-input-wrapper">
                 <i class="icon ion-ios-search placeholder-icon"></i>
                 <input type="search" placeholder="{{ 'list_search' | translate }}" ng-model="searchQuery.value" ng-change="filterItems(searchQuery.value)">
@@ -10,8 +10,7 @@
             </button>
         </div>
 
-        <mz-template ng-repeat="item in filteredItems" bind-to="item" template-type="_screenParams.templateType"
-            screen-params="_screenParams"   ng-click="itemClickHandler(item)">
+        <mz-template ng-repeat="item in filteredItems" bind-to="item" template-type="_screenParams.templateType" screen-params="_screenParams"   ng-click="itemClickHandler(item)">
         </mz-template>
 
         <div class="card" ng-show="!filteredItems.length">

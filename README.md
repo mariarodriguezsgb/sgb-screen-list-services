@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>SGB-screen-list</h1>
 
 <h3>Propósito</h3>
@@ -96,3 +97,6 @@ Para esta vista existe la posibilidad de incluir un ićono a la derecha del text
 
 ![Alt Text](https://s3.amazonaws.com/megazord-framework/balsamiq+mockups/sgb-screen-list-large.png)
 
+=======
+# sgb-screen-list-services
+>>>>>>> f1aa7eaaec133dcadfea66cf9709fd946a6798a8
